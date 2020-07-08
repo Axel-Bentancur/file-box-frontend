@@ -29,7 +29,7 @@ export default class Navigation extends Component {
                 box
               </Link>
               <Link className="navbar-brand" to="/user/signup">
-                SingUp
+                Sign Up
               </Link>
               <Link className="navbar-brand" to="/login">
                 login
