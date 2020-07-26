@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 import axios from "axios";
 
-export default class CreateUser extends Component {
+
+export default class Register extends Component {
   state = {
     user: "",
     dni: "",
@@ -42,6 +44,7 @@ export default class CreateUser extends Component {
       confirm_password: this.state.confirm_password,
     });
     this.setState({ user: "", dni: "", password: "", confirm_password: "" });
+    
   };
 
   render() {
@@ -94,6 +97,8 @@ export default class CreateUser extends Component {
                     />
                   </div>
                   <button className="btn btn-primary btn-block">login</button>
+                  <br/>
+                  <span>Si ya estas registrado, Loguea <Link to='/'>ACA</Link></span>
                 </form>
               </div>
             </div>

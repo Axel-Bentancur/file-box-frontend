@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import {Link} from 'react-router-dom';
 
-export default class Login extends Component {
+export default class HomePage extends Component {
   render() {
     return (
-      <main className="container p-5">
-        <div className="row">
-          <div className="col-md-4 mx-auto">
+        <div className="row ">
+          <div className="col d-flex align-items-center justify-content-center">
+            <h1>Hola</h1>
+          </div>
+          <div className="col d-flex align-items-center justify-content-center">
             <div className="card">
               <div className="card-header">Acount Login</div>
               <div className="card-body">
@@ -35,12 +38,13 @@ export default class Login extends Component {
                     />
                   </div>
                   <button className="btn btn-primary btn-block">login</button>
+                  <br/>
+                  <span>Todavia no estas registrado, ingresa <Link to='/register'>ACA</Link></span>
                 </form>
               </div>
             </div>
           </div>
         </div>
-      </main>
     );
   }
 }

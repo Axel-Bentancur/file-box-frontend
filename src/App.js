@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -23,4 +23,25 @@ function App() {
   );
 }
 
-export default App;
+export default App; */
+
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import HomePage from "./components/HomePage";
+import Register from "./components/Register";
+
+
+export default function App() {
+  return (
+    <div className="box">
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route  path="/register" component={Register} />
+        </Switch>
+      </Router>
+    </div>
+  );
+}
