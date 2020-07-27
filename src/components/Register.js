@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom';
-import axios from "axios";
+import { Link } from "react-router-dom";
+import Axios from "axios";
 
 
 export default class Register extends Component {
@@ -10,6 +10,7 @@ export default class Register extends Component {
     password: "",
     confirm_password: "",
   };
+
 
   onChangeUserName = (e) => {
     this.setState({
@@ -37,7 +38,7 @@ export default class Register extends Component {
 
   onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:4000/user/signup", {
+    await Axios.post("http://localhost:4000/register", {
       user: this.state.user,
       dni: this.state.dni,
       password: this.state.password,
@@ -97,8 +98,10 @@ export default class Register extends Component {
                     />
                   </div>
                   <button className="btn btn-primary btn-block">login</button>
-                  <br/>
-                  <span>Si ya estas registrado, Loguea <Link to='/'>ACA</Link></span>
+                  <br />
+                  <span>
+                    Si ya estas registrado, Loguea <Link to="/">ACA</Link>
+                  </span>
                 </form>
               </div>
             </div>
